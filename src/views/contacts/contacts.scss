@@ -1,0 +1,137 @@
+.row {
+    align-items: stretch;
+    height: 100%;
+}
+
+
+#test {
+    border: 1px solid rebeccapurple;
+}
+
+#col-test {
+    border: 2px solid orange;
+    
+}
+
+#val {
+    border: 1px solid red;
+}
+.align-start {
+    border: 1px solid blue;
+}
+#try {
+    flex-direction: column;
+}
+.v-application .d-flex  {
+    justify-content: space-around;
+}
+#icons {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span {
+    display: inline-flex;
+    color: lightcoral;
+    text-align: center;
+    align-items: center;
+}
+
+@media (min-width: 426px) and (max-width: 960px) {
+    #test {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+    }
+    #val {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #col-test {
+        background-color: khaki;
+        width: 50%;
+    }
+    #parameters-row {
+        flex-direction: column;
+    }
+    .parameters-col {
+        flex-direction: row !important;
+        columns: 1 600px !important;
+    }
+    span.justify-center {
+        margin-left: 10px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+}
+.time-cell { width: 30%; }   
+.temp-cell { width: 30%; }
+.pres-cell { width: 20%; }
+.hmd-cell { width: 20%; }
+
+.v-application p    {
+    color: red;
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .table-row {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgb(209, 213, 236);
+    }
+
+    .table-cell {
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+        list-style: none;
+        text-align: center;
+        color: black;
+        margin: 5px 0 5px 0;
+        
+
+        &.column-header {
+            color: gray;
+            font-weight: bold;
+            
+        }
+        &.time-cell {
+            text-align: left;
+        }
+        p.short-title {
+            // color: blue
+        }
+    }
+    .short {
+        display: none;
+    }
+}
+@media screen and (max-width: 610px) {
+    .column-header {
+        display: none;
+        
+        &.short {
+            display: inline-block;
+        }
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1264px) {
+    .column-header {
+        display: none;
+        
+        &.short {
+            display: inline-block;
+        }
+    }
+    .temp-cell {
+        width: 20%;
+    }
+}

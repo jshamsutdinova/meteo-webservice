@@ -1,0 +1,100 @@
+.v-card__title {
+  background-color: 	#98bccf;  
+  padding:  10px;
+  h3 {
+      color: rgb(15, 15, 15);
+  }
+}
+
+.v-application .ma-3 {
+    margin-top: 5px !important;
+}
+
+.v-application p {
+    margin-bottom: 1px;
+}
+
+.time-cell-daily { width: 25%; }   
+.temp-cell-daily { width: 20%; }
+.pres-cell-daily { width: 20%; }
+.hmd-cell-daily { width: 20%; }
+
+.time-cell-weekly { width: 15%; }   
+.temp-cell-weekly { width: 45%; }
+.pres-cell-weekly { width: 20%; }
+.hmd-cell-weekly { width: 20%; }
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+
+  .table-row {
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid rgb(209, 213, 236);
+      font-size: 14px;
+      color: $main-text-color
+  }
+  .table-row:not(.header):hover {
+      background-color: rgba(219, 230, 233, 0.918);
+      color: rgb(48, 49, 107);
+  }
+
+    .table-cell {
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+        list-style: none;
+        text-align: center;
+        margin: 6px 0 6px 0;      
+
+        &.column-header {
+            color: gray;
+            font-weight: bold;
+            
+        }
+        &.time-cell-daily {
+            text-align: left;
+        }
+        &.time-cell-weekly {
+            text-align: left;
+        }
+        
+    }
+    p.short {
+        display: none;
+    }
+}
+@media screen and (max-width: 610px) {
+    p.full {
+        display: none;
+
+    }
+    p.short {
+        display: inline-block !important;
+    } 
+    .time-cell-daily { width: 40%; }   
+
+    .time-cell-weekly { width: 25%; }   
+    .temp-cell-weekly { width: 50%; }
+}
+@media screen and (min-width: 500px) and (max-width: 959px) {
+    .table {
+        margin-left: 25px !important;
+        margin-right: 25px !important;
+        margin-bottom: 25px !important;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1264px) {
+    p.full {
+        display: none;
+
+    }
+    p.short {
+        display: inline-block !important;
+    } 
+    .time-cell-daily { width: 40%; }   
+
+    .time-cell-weekly { width: 25%; }   
+    .temp-cell-weekly { width: 50%; }
+}

@@ -1,0 +1,30 @@
+#header {
+    background-color: rgb(255, 255, 255);
+}
+#menuButton {
+    color: #686666;
+}
+
+i {
+    padding-right: 5px;
+}
+.mdi {
+    font-size: 30px;
+}
+
+#title {
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 345px) {
+    #title {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    #title {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,33 @@
+div.v-card__title {
+    font-size: 25px !important;
+    color: 		#03396c;
+}
+
+div.row {
+    margin: auto;
+}
+
+div.col-md-6 {
+    padding-left: 20px;
+}
+
+div.v-input.theme--light {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+div.v-application--is-ltr .v-messages {
+    display: none !important;
+}
+
+div.v-input {
+    .v-application--is-ltr {
+        display: none;
+    }
+}
+
+div.v-messages.theme--light.primary--text {
+    .v-application--is-ltr {
+        display: none;
+    }
+}
