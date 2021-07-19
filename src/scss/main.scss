@@ -1,12 +1,12 @@
 // @import '../../node_modules/@mdi/font/scss/materialdesignicons';
 $mdi-font-path: '../../node_modules/@mdi/font/fonts/';
 
-// @font-face {
-//     font-family: 'Conv_Qahiri';
-//     src: url('@fonts/Qahiri-Regular.eot');
-//     src: local('☺'), url('@fonts/Qahiri-Regular.woff') format('woff'), url('@fonts/Qahiri-Regular.ttf') format('truetype'), url('@fonts/Qahiri-Regular.svg') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-//   }
+@font-face {
+    font-family: 'Conv_Qahiri';
+    src: url('@fonts/Qahiri-Regular.eot');
+    src: local('☺'), url('@fonts/Qahiri-Regular.woff') format('woff'), url('@fonts/Qahiri-Regular.ttf') format('truetype'), url('@fonts/Qahiri-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 $main-text-color:  rgb(73, 73, 73);
