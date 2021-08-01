@@ -9,18 +9,9 @@ export default {
     activeParameter: 'temperature',
     buttons: {
       days: [
-        {
-          id: 1,
-          title: 'daily'
-        },
-        {
-          id: 2,
-          title: 'weekly'
-        },
-        {
-          id: 3,
-          title: 'monthly'
-        }
+        { id: 1, title: 'daily' },
+        { id: 2, title: 'weekly' },
+        { id: 3, title: 'monthly' }
       ],
       parameters: [
         { id: 1, title: 'temperature' },
@@ -32,7 +23,7 @@ export default {
       labels: ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '24:00'],
       datasets: [
         {
-          label: 'Temperature',
+          label: 'Daily temperature',
           hoverBackgroundColor: '#fff952',
           borderColor: '#4966a5',
           borderWidth: '4',
@@ -55,8 +46,9 @@ export default {
   }),
   methods: {
     filterBy: function () {
-      switch (this.activeDay || this.activeParameter) {
-        case ('weekly' || 'temperature'):
+      console.log('active parameters ' + this.activeParameter + ' ' + this.activeDay)
+      switch (true) {
+        case (this.activeParameter === 'temperature' && this.activeDay === 'daily'):
           this.chartdata = {
             labels: ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '24:00'],
             datasets: [
@@ -71,7 +63,7 @@ export default {
             ]
           }
           break
-        case ('monthly' || 'temperature'):
+        case (this.activeParameter === 'temperature' && this.activeDay === 'weekly'):
           this.chartdata = {
             labels: ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '24:00'],
             datasets: [
@@ -86,7 +78,7 @@ export default {
             ]
           }
           break
-        case ('daily' || 'temperature'):
+        case (this.activeParameter === 'temperature' && this.activeDay === 'monthly'):
           this.chartdata = {
             labels: ['00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '24:00'],
             datasets: [
@@ -98,6 +90,48 @@ export default {
                 fill: true,
                 data: [17, 16, 18, 21, 24, 27, 25, 21, 18]
               }
+            ]
+          }
+          break
+        case (this.activeParameter === 'pressure' && this.activeDay === 'daily'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Daily pressure' }
+            ]
+          }
+          break
+        case (this.activeParameter === 'pressure' && this.activeDay === 'weekly'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Weekly pressure' }
+            ]
+          }
+          break
+        case (this.activeParameter === 'pressure' && this.activeDay === 'monthly'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Monthly pressure' }
+            ]
+          }
+          break
+        case (this.activeParameter === 'humidity' && this.activeDay === 'daily'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Daily humidity' }
+            ]
+          }
+          break
+        case (this.activeParameter === 'humidity' && this.activeDay === 'weekly'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Weekly humidity' }
+            ]
+          }
+          break
+        case (this.activeParameter === 'humidity' && this.activeDay === 'monthly'):
+          this.chartdata = {
+            datasets: [
+              { label: 'Monthly humidity' }
             ]
           }
           break
